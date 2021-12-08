@@ -1,0 +1,61 @@
+.nav__list {
+    display: flex;
+    gap: 25px;
+}
+
+.nav__link {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid transparent;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    outline: none;
+}
+.nav__link:focus{
+    border-color: #5B5B5B;
+}
+.nav__link:active,.nav__link:hover{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
+
+}
+.netflix {
+background-image: url('../img/netflix.svg');
+}
+
+.okko{
+    background-image: url('../img/okko.svg');
+}
+.kinopoisk{
+    background-image: url('../img/kino.svg');
+}
+.nav__btn{
+    display: none;
+}
+.nav{
+position: relative;
+}
+@media (max-width: 750px) {
+    .nav__list {
+        display: none;
+    }
+    .nav__btn{
+        display: block;
+    }
+    .nav__list_active{
+        display: flex;
+        flex-direction: column;
+        top: 35px;
+        gap: 10px;
+        right: 0;
+        position: absolute;
+    }
+    .nav__link{
+        display: block;
+         width: 32px;
+        height: 32px;
+    }
+}

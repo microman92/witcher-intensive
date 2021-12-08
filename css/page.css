@@ -1,0 +1,128 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    background-color: #000;
+    color           : #fff;
+    min-width       : 320px;
+    min-height      : 100vh;
+    font-family     : arial, sans-serif;
+    font-weight     : 900;
+    font-size       : 20px;
+    line-height     : 1.2;
+    background-image: linear-gradient(181.78deg, rgba(0, 0, 0, 0) 49.38%, rgba(0, 0, 0, 0.42) 98.49%),
+        url('../img/background.jpg');
+
+}
+
+img {
+    max-width: 100%;
+    height   : auto;
+}
+
+button {
+    cursor : pointer;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color          : inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+iframe {
+    border: none;
+}
+
+.container {
+    max-width: 1172px;
+    padding  : 0 31px;
+    margin   : 0 auto;
+}
+
+.page {
+    position: relative;
+}
+
+.page::before {
+    content            : '';
+    position           : absolute;
+    right              : 96px;
+    bottom             : 0;
+    height             : calc(100% - 115px);
+    width              : 100%;
+    background-image   : url(../img/geralt-bg.png);
+    background-repeat  : no-repeat;
+    background-position: right bottom;
+    background-size    : contain;
+    z-index            : -1;
+}
+
+
+@media (min-height: 900px) {
+    .page {
+        display       : flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 16px;
+    }
+
+    .page::before {
+        right: 0px;
+        height             : calc(100% - 90px);
+    }
+}
+
+@media (max-width: 850px) {
+    .container {
+        padding: 0 20px;
+    }
+    .page::before {
+        top: 109px;
+        bottom: auto;
+        height             : 448px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+    .page::before {
+        top: 49px;
+
+        height             : 258px;
+    }
+}
