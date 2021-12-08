@@ -1,5 +1,7 @@
 import burgerMenu from "./burger.js";
-import tabs from "./tabs.js"
+import tabs from "./tabs.js";
+import renderTabs from "./renderTabs.js";
+
 
 burgerMenu ({
     selectorMenu: '.nav__list',
@@ -10,4 +12,5 @@ burgerMenu ({
         activeClassButton:'tabs__btn-active',
         selectorTabsElement: '.tabs__item',
         activeClassTab: 'tabs__item-active',
+        callback: renderTabs,
     })

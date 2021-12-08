@@ -16,6 +16,7 @@ const tabs = (Option) => {
                   tabsBtns[i].classList.add(activeClassButton);
                   
                   tabsElem[i].classList.add(activeClassTab);
+                  callback(i);
                }else {
                 tabsBtns[i].classList.remove(activeClassButton);
                 tabsElem[i].classList.remove(activeClassTab);
