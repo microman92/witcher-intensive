@@ -27,7 +27,7 @@ const getCard = function (dataCard) {
                                 <img class="product__img" src="${dataCard.picture}" alt="${dataCard.description}">
                                 <h2 class="product__title">${dataCard.name}</h2>
                                     <div class="product__wrapper-buy">
-                                        <p class="product__price">${dataCard.price}</p>
+                                        <p class="product__price">${dataCard.price}₽</p>
                                         <button class="product__btn_buy"> <svg class="product__btn_icon">
                                         <use xlink:href="#add"></use>
                                         </svg> </button>
