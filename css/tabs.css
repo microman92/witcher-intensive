@@ -1,3 +1,7 @@
+.tabs__list{
+    min-height: 285px;
+}
+
 .tabs__control {
     display         : flex;
     justify-content : space-between;
